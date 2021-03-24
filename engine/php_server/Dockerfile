@@ -14,10 +14,7 @@ libc-client-dev \
 libkrb5-dev \
 libpspell-dev \
 libmagickwand-dev \
-nodejs \
 libxslt-dev --no-install-recommends \
-npm \
-&& npm install express express-session mysql \
 && rm -r /var/lib/apt/lists/* \
 && apt-get upgrade -y
 RUN docker-php-ext-configure imap --with-kerberos --with-imap-ssl

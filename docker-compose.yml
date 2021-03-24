@@ -2,8 +2,12 @@ version: "3.8"
 services:
 
   db:
-    image: mysql
+    image: mysql:5.7
     restart: always
+    ports:
+      - '3306:3306'
+    volumes:
+      - "./mysql:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: plexdb
@@ -26,7 +30,7 @@ services:
     restart: always
     build: ./engine/php_server/
     volumes:
-      - ".html:/var/www/html"
+      - "./html:/var/www/html"
     depends_on:
       - db
     links:
@@ -36,3 +40,4 @@ services:
     dns:
     - 208.67.222.222
     - 208.67.220.220
+
