@@ -4,32 +4,23 @@ services:
   db:
     image: mysql
     restart: always
-    volumes: 
-      - "./db:/etc/mysql/conf.d/mysqld_charset.cnf"
-    ports: 
-      - "3306:3306"
     environment:
-      MYSQL_USER: plexuser
-      MYSQL_PASSWORD: passw0rd
-      MYSQL_DATABASE: plexdb
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: plexdb
+      MYSQL_USER: plexuser
+      MYSQL_PASSWORD: plexpwd
 
-
+  # phpmyadmin
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    restart: always
-    volumes: 
-      - "./phpmyadmin:/etc/phpmyadmin"
     depends_on:
       - db
-    links:
-      - db
-    ports: 
-      - "8181:80"
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
     environment:
-        MYSQL_USER: plexuser
-        MYSQL_PASSWORD: passw0rd 
-        MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root 
 
   php:
     restart: always
