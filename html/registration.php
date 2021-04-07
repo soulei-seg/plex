@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>Registration</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<body>
-<?php
+
+<body style="background-color: #15161b; font-family: sans-serif;">
+    <?php
     require('db.php');
     // When form submitted, insert values into the database.
     if (isset($_REQUEST['username'])) {
@@ -34,14 +36,29 @@
                   </div>";
         }
     }
-?>
-    <form class="form" action="" method="post">
-        <h1 class="login-title">Registration</h1>
-        <input type="text" class="login-input" name="username" placeholder="Username" required />
-        <input type="text" class="login-input" name="email" placeholder="Email Adress">
-        <input type="password" class="login-input" name="password" placeholder="Password">
-        <input type="submit" name="submit" value="Register" class="login-button">
-        <p class="link"><a href="index.php">Click to Login</a></p>
-    </form>
+    ?>
+
+    <div style="color: orange; margin-top: 10%;  text-align: center;" id="frm">
+        <h1>Register</h1>
+        <form action="" method="post">
+            <p style="margin-top: 2%;">
+                <label>Username</label><br />
+                <input style="border-radius: 10px;" type="text" id="username" name="username" />
+            </p>
+            <p style="margin-top: 2%;">
+                <label>Email</label><br />
+                <input style="border-radius: 10px;" type="text" id="email" name="Email adress" />
+            </p>
+            <p>
+                <label>Password</label><br />
+                <input style="border-radius: 10px;" type="password" id="password" name="password" />
+            </p><br />
+            <p>
+                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type="submit" id="btn" name="submit" value="Register" /><br /><br />
+                <a style="color: orange;" href="./index.php">Already registered ? Sign in now !</a>
+            </p>
+        </form>
+    </div>
 </body>
+
 </html>
