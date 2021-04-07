@@ -1,6 +1,6 @@
 <html>  
 <head>  
-    <title>PHP login system</title>  
+    <title>Sign in</title>  
     <link rel = "stylesheet" type = "text/css" href = "style.css">   
 </head>  
 <body style="background-color: #15161b; font-family: sans-serif;">  
@@ -16,7 +16,8 @@
                 <input style="border-radius: 10px;" type = "password" id ="pass" name  = "pass" />  
             </p><br />  
             <p>
-                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type =  "submit" id = "btn" value = "Login" />  
+                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type =  "submit" id = "btn" value = "Login" /><br /><br />  
+                <a style="color: orange;" href="./registration.php">Not registred yet ? Sign up now !</a>
             </p>  
         </form>  
     </div>  
@@ -43,4 +44,4 @@
             }  
         </script>  
 </body>     
-</html>  
+</html>
