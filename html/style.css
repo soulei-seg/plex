@@ -5,7 +5,7 @@ body {
     margin: 50px auto;
     width: 300px;
     padding: 30px 25px;
-    background: white;
+    background: #15161b;
 }
 h1.login-title {
     color: #666;
@@ -38,13 +38,14 @@ h1.login-title {
     cursor: pointer;
 }
 .link {
-    color: #666;
+    color: orange;
     font-size: 15px;
     text-align: center;
     margin-bottom: 0px;
+    text-decoration: none;
 }
 .link a {
-    color: #666;
+    color: orange;
 }
 h3 {
     font-weight: normal;

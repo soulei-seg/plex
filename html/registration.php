@@ -25,14 +25,14 @@
                      VALUES ('$username', '" . $password . "', '$email', '$create_datetime')";
         $result   = mysqli_query($con, $query);
         if ($result) {
-            echo "<div class='form'>
+            echo "<div style='color: orange; text-align: center;' class='form'>
                   <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here to <a href='index.php'>Login</a></p>
+                  <p class='link'><a href='index.php'>Click here to Login</a></p>
                   </div>";
         } else {
             echo "<div class='form'>
                   <h3>Required fields are missing.</h3><br/>
-                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                  <p class='link'><a href='registration.php'>Click here to registration again</a></p>
                   </div>";
         }
     }
@@ -54,8 +54,8 @@
                 <input style="border-radius: 10px;" type="password" id="password" name="password" />
             </p><br />
             <p>
-                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type="submit" id="btn" name="submit" value="Register" /><br /><br />
-                <a style="color: orange;" href="./index.php">Already registered ? Sign in now !</a>
+                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type="submit" id="btn" name="submit" value="Confirm" /><br /><br />
+                <a style="color: orange; text-decoration: none;" href="./index.php">Already registered ? <u><b>Sign in</b></u> now !</a>
             </p>
         </form>
     </div>
