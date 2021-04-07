@@ -45,7 +45,7 @@
                 <label>Username</label><br />
                 <input style="border-radius: 10px;" type="text" id="username" name="username" />
             </p>
-            <p style="margin-top: 2%;">
+            <p>
                 <label>Email</label><br />
                 <input style="border-radius: 10px;" type="text" id="email" name="Email adress" />
             </p>
