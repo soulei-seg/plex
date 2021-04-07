@@ -44,6 +44,9 @@ jspm_packages/
 # Plex configuration directory
 plex_config/
 
+# Mysql_backup
+mysql_files/
+
 # TypeScript v1 declaration files
 typings/
 
@@ -90,4 +93,6 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 
-
+# Prevent from pushing movies 
+*.mp4 
+*.mp3
