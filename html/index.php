@@ -1,27 +1,25 @@
 <html>  
 <head>  
     <title>PHP login system</title>  
-    // insert style.css file inside index.html  
     <link rel = "stylesheet" type = "text/css" href = "style.css">   
 </head>  
-<body>  
-    <div id = "frm">  
+<body style="background-color: #15161b; font-family: sans-serif;">  
+    <div style="color: orange; margin-top: 10%;  text-align: center;" id = "frm">  
         <h1>Login</h1>  
         <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
-            <p>  
-                <label> UserName: </label>  
-                <input type = "text" id ="user" name  = "user" />  
+            <p style="margin-top: 2%;">  
+                <label>Username</label><br /> 
+                <input style="border-radius: 10px;" type = "text" id ="user" name  = "user" />  
             </p>  
             <p>  
-                <label> Password: </label>  
-                <input type = "password" id ="pass" name  = "pass" />  
-            </p>  
-            <p>     
-                <input type =  "submit" id = "btn" value = "Login" />  
+                <label>Password</label><br />
+                <input style="border-radius: 10px;" type = "password" id ="pass" name  = "pass" />  
+            </p><br />  
+            <p>
+                <input style="font-weight: bold; border: none; color: #15161b; background-color: orange; font-size: 22px; width: 150px; height: 60px; border-radius: 10px;" type =  "submit" id = "btn" value = "Login" />  
             </p>  
         </form>  
     </div>  
-    // validation for empty field   
     <script>  
             function validation()  
             {  
