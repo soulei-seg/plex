@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('db.php');
 $username = $_POST['user'];
 $password = $_POST['pass'];
 
@@ -16,9 +16,6 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $count = mysqli_num_rows($result);
 
 session_start();
-if (!isset($_SESSION['nID']))
-    header("Location: login.php");
-
 if ($count == 1) {
     header("Location: http://127.0.0.1:32400/web");
 } else {
