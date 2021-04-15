@@ -42,7 +42,12 @@ node_modules/
 jspm_packages/
 
 # Plex configuration directory
-config/
+plex/config/
+
+# Jacket Configuration directory
+jackett/config/Jackett/DataProtection/
+
+log.txt
 
 # Mysql_backup
 mysql_files/

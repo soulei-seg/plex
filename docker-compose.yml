@@ -60,5 +60,5 @@ services:
     ports: 
       - "9117:9117"
     volumes:
-      - ./jacket/downloads:/downloads # place where to put .torrent files for manual download
+      - ./jacket/downloads:/downloads/Jackett # place where to put .torrent files for manual download
       - ./jackett/config:/config # config files
