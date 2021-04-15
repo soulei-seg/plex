@@ -9,12 +9,12 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "__cfduid=d9a62083c72fcafa7f79f332684c43c761618481934"
+    "value": "__cfduid=d9fb1d89979abd5473de74154845551431618486608"
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": null
+    "value": "Exception (thepiratebay): Cannot assign requested address: Cannot assign requested address (apibay.org:443)"
   }
 ]

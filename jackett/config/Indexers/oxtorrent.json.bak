@@ -9,13 +9,13 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": null
+    "value": "__cfduid=daa4848944be5ea722503c7b7fb289b111618499797"
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": null
+    "value": "Exception (oxtorrent): Cannot assign requested address: Cannot assign requested address (www.oxtorrent.tv:443)"
   },
   {
     "id": "replacemultibyanotherlanguageinreleasename",

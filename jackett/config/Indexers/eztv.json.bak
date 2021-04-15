@@ -3,18 +3,18 @@
     "id": "sitelink",
     "type": "inputstring",
     "name": "Site Link",
-    "value": "https://thepiratebay.org/"
+    "value": "https://eztv.re/"
   },
   {
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": ""
+    "value": "__cfduid=dd703339fda3e6e1671896169e594e3b91618499680; PHPSESSID=44cafddc59e2f1e51ca3adc3dd746e8c"
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": null
+    "value": "Exception (eztv): Name or service not known: Name or service not known (eztv.re:443)"
   }
 ]

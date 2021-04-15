@@ -1,0 +1,55 @@
+{
+    "file": 2,
+    "format": 1
+}{
+    "base": "/",
+    "cert": "ssl/daemon.cert",
+    "default_daemon": "",
+    "enabled_plugins": [],
+    "first_login": false,
+    "https": false,
+    "interface": "0.0.0.0",
+    "language": "fr",
+    "pkey": "ssl/daemon.pkey",
+    "port": 8112,
+    "pwd_salt": "c26ab3bbd8b137f99cd83c2c1c0963bcc1a35cad",
+    "pwd_sha1": "2ce1a410bcdcc53064129b6d950f2e9fee4edc1e",
+    "session_timeout": 3600,
+    "sessions": {
+        "0b8e693143008bc313a61e8cf5bed8221071ce3df3ef8685d21f0b6b2aedee95": {
+            "expires": 1618491357.0,
+            "level": 10,
+            "login": "admin"
+        },
+        "55f7fc6af27a3e3eab4b2d1ac7273bf97cf53adfe22227f94fbe9a64a44438ea": {
+            "expires": 1618498130.0,
+            "level": 10,
+            "login": "admin"
+        },
+        "56d59fa1196403f88b27d07c00c45a29a7c4b21693015b0b923dadd4480eac59": {
+            "expires": 1618491358.0,
+            "level": 10,
+            "login": "admin"
+        },
+        "b104996b9e76ec350c1b339d6664ae2880ccf30d83b84a7b4d15c51aeca2f4ca": {
+            "expires": 1618492927.0,
+            "level": 10,
+            "login": "admin"
+        },
+        "b6fd468dba3b0b4efa55b45b17d369dbf2223ab991e733216af6a783e5124a67": {
+            "expires": 1618493320.0,
+            "level": 10,
+            "login": "admin"
+        },
+        "d8663c9f5dcb87c732df586a871b9f901d5380492b16d5bedab4e1e104166c97": {
+            "expires": 1618491412.0,
+            "level": 10,
+            "login": "admin"
+        }
+    },
+    "show_session_speed": false,
+    "show_sidebar": true,
+    "sidebar_multiple_filters": true,
+    "sidebar_show_zero": false,
+    "theme": "gray"
+}
