@@ -44,10 +44,17 @@ jspm_packages/
 # Plex configuration directory
 plex/config/
 
+downloads/complete/*
+downloads/incomplete/*
+
 # Jacket Configuration directory
-jackett/config/Jackett/DataProtection/
+jackett/config/DataProtection/
+
+# Deluge Configuration directory
+#deluge/config
 
 log.txt
+ServerConfig.json
 
 # Mysql_backup
 mysql_files/

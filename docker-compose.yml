@@ -49,10 +49,20 @@ services:
       - "32400:32400"
     volumes:
       - ./plex/config:/config
-      - ./plex/series:/tv
-      - ./plex/movies:/movies
+      - ./downloads/complete/tv:/data/tv
+      #- ./plex/movies:/movies
     restart: unless-stopped
 
+  deluge:
+    container_name: deluge
+    image: linuxserver/deluge:latest
+    restart: always
+    ports: 
+      - "8112:8112"
+    volumes:
+      - ./downloads:/downloads # downloads folder
+      - ./deluge/config:/config # config files
+  
   jackett:
     container_name: jackett
     image: linuxserver/jackett:latest
@@ -60,5 +70,26 @@ services:
     ports: 
       - "9117:9117"
     volumes:
-      - ./jacket/downloads:/downloads/Jackett # place where to put .torrent files for manual download
-      - ./jackett/config:/config # config files
+      - ./downloads/torrent-blackhole:/downloads/ # place where to put .torrent files for manual download
+      - ./jackett/config:/config/Jackett # config files
+
+  nzbget:
+    container_name: nzbget
+    image: linuxserver/nzbget:latest
+    restart: unless-stopped
+    ports:
+      - "6789:6789"
+    volumes:
+     - ./downloads:/downloads # download folder
+     - ./nzbget/config:/config # config files
+
+  sonarr:
+    container_name: sonarr
+    image: linuxserver/sonarr:latest
+    restart: unless-stopped
+    ports:
+     - "8989:8989"
+    volumes:
+     - ./sonarr/config:/config # config files
+     - ./downloads/complete/tv:/tv # tv shows folder
+     - ./downloads:/downloads # download folder
