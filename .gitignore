@@ -42,7 +42,7 @@ node_modules/
 jspm_packages/
 
 # Plex configuration directory
-plex_config/
+config/
 
 # Mysql_backup
 mysql_files/
