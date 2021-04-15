@@ -7,8 +7,8 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - "./mysql:/docker-entrypoint-initdb.d/"
-      - "./mysql_files:/var/lib/mysql"
+      - "./db/mysql:/docker-entrypoint-initdb.d/"
+      - "./db/mysql_files:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: plexdb
@@ -31,7 +31,7 @@ services:
     restart: always
     build: ./engine/php_server/
     volumes:
-      - "./html:/var/www/html"
+      - "./engine/html:/var/www/html"
     depends_on:
       - db
     links:
@@ -48,7 +48,17 @@ services:
     ports:
       - "32400:32400"
     volumes:
-      - ./plex_config:/config
-      - ./tv:/tv
-      - ./movies:/movies
+      - ./plex/config:/config
+      - ./plex/series:/tv
+      - ./plex/movies:/movies
     restart: unless-stopped
+
+  jackett:
+    container_name: jackett
+    image: linuxserver/jackett:latest
+    restart: unless-stopped
+    ports: 
+      - "9117:9117"
+    volumes:
+      - ./jacket/downloads:/downloads/Jackett # place where to put .torrent files for manual download
+      - ./jackett/config:/config # config files
