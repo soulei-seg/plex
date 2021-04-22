@@ -17,7 +17,7 @@ $count = mysqli_num_rows($result);
 
 session_start();
 if ($count == 1) {
-    header("Location: http://192.168.193.100:32400/web");
+    header("Location: http://127.0.0.1:32400/web");
 } else {
     echo "<h1> Login failed. Invalid username or password.</h1>";
 }
