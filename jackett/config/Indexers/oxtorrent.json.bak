@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (oxtorrent): Cannot assign requested address: Cannot assign requested address (www.oxtorrent.tv:443)"
+    "value": null
   },
   {
     "id": "replacemultibyanotherlanguageinreleasename",
