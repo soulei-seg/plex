@@ -73,16 +73,6 @@ services:
       - ./downloads/torrent-blackhole:/downloads/ # place where to put .torrent files for manual download
       - ./jackett/config:/config/Jackett # config files
 
-  nzbget:
-    container_name: nzbget
-    image: linuxserver/nzbget:latest
-    restart: unless-stopped
-    ports:
-      - "6789:6789"
-    volumes:
-     - ./downloads:/downloads # download folder
-     - ./nzbget/config:/config # config files
-
   sonarr:
     container_name: sonarr
     image: linuxserver/sonarr:latest
@@ -93,3 +83,14 @@ services:
      - ./sonarr/config:/config # config files
      - ./downloads/complete/tv:/tv # tv shows folder
      - ./downloads:/downloads # download folder
+
+  radarr:
+    container_name: radarr
+    image: linuxserver/radarr:latest
+    restart: unless-stopped
+    ports:
+     - "7878:7878"
+    volumes: 
+     - ./radarr/config:/config
+     - ./downloads/complete/movies:/movies
+     - ./downloads:/downloads
